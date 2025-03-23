@@ -1,1 +1,7 @@
-"node_modules/\nbuild/\ndist/\n.env" 
+node_modules/ 
+build/ 
+dist/ 
+.env 
+package-lock.json 
+*.log 
+*.cache 
