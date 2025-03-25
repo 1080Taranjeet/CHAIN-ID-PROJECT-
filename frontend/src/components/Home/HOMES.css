@@ -1,0 +1,190 @@
+.org {
+    width: max-content;
+}
+.org-sub {
+    color: #1976d2;
+    font-size: 350%;
+    /* Corrected invalid unit */
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    /* Ensures width can animate */
+    width: 0%;
+    /* Initial width to start the animation */
+    animation-name: anima;
+    animation-duration: 5s;
+    animation-timing-function: steps(15, end);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.org:hover{
+    text-shadow: -0px -0px 20px #1976d2;
+    color: #1976d2;
+    box-shadow: inset 20px #1976d2;
+}
+.org div:last-child{
+    height: inherit;
+    width: 1px;
+    background-color: white;
+    opacity: 9;
+    animation-name: cursor;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes cursor {
+    from{
+        opacity: 0;
+        box-shadow: 1px 1px 0px rgb(0, 0, 0);
+    }
+    to{
+        opacity: 9;
+        box-shadow: 0px 50px 50px white;
+    }
+}
+@keyframes anima {
+    80% {
+        width: 100%;
+    }
+
+    80%,
+    100% {
+        width: 100%;
+    }
+}
+
+/* Main Info slides from left */
+.main-info {
+    animation: slide-in-left 1.5s ease-out;
+}
+
+/* Main Image slides from right */
+.main-img-i {
+    animation: slide-in-right 1.5s ease-out; /* Reduced duration */
+    width: 60%;
+    height: 60%;
+    filter: drop-shadow(0 0 1px #1976d2) 
+            drop-shadow(0 0 10px #1976d2)
+            drop-shadow(0 0 30px #ffffff);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Animation for main-info (left slide-in) */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100vw) scaleX(1.5);
+    }
+    to {
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+/* Animation for main-img-i (right slide-in) */
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100vw) scaleX(1.5); /* Reduced initial offset */
+    }
+    to {
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 972px) {
+    .main-info {
+        order: 2;
+    }
+    .main-img {
+        order: 1;
+    }
+    .org-sub {
+        font-size: 250%;
+    }
+    .org-sub:nth-child(2){
+        font-size: 200%;
+        padding: 1.6% 0%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .org-sub {
+        font-size: 200%;
+    }
+    .org-sub:nth-child(2){
+        font-size: 100%;
+    }
+}
+
+/* Rounded Image */
+.main-img {
+    border-radius: 60%;
+}
+
+/* Subtle box-shadow animation */
+@keyframes slide-out-sub {
+    0%, 50% {
+        box-shadow: none;
+    }
+    50%, 100% {
+        box-shadow: -10px 10px 5px orangered;
+    }
+}
+
+/* Intensify the glow on hover */
+.main-img-i:hover {
+    filter: drop-shadow(0 0 10px #1976d2) 
+            drop-shadow(0 0 40px #1976d2) 
+            drop-shadow(0 0 80px #ffffff);
+}
+
+.Home-button-main{
+    width: auto;
+    position: relative;
+    display: inline-block;
+    transform: skewX(20deg);
+    transform-origin: bottom right;
+}
+.Home-button-sub{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.Home-button-sub div:nth-child(1){
+    width: 50%;
+    height: 50%;
+    float: right;
+    border: 2px solid greenyellow;
+    border-bottom:0 ;
+    border-left: 0;
+}
+.Home-button-sub div:nth-child(2){
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    border: 2px solid greenyellow;
+    border-top: 0;
+    border-right: 0;
+}
+.Home-button-sub:hover div{
+    width: 0px !important;
+    height: 0px!important;
+    padding: 0% !important;
+}
+.Home-button p {
+    transform: skewX(-20deg);
+}
+.Home-button{
+    font-size: 100%;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: 1px solid greenyellow;
+    background-color: transparent;
+    color: white;
+    text-shadow: 0px 0px 10px greenyellow;
+    box-shadow: inset 30px 0px  10px greenyellow !important;
+    overflow: hidden;
+}

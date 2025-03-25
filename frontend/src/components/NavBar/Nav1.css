@@ -1,0 +1,69 @@
+.navbar {
+    border: none !important;
+}
+.main-heading{
+    margin: 0 !important;
+}
+.main-heading:hover{
+    text-shadow: -0px -0px 20px #1976d2;
+    color: #1976d2;
+    box-shadow: inset 20px #1976d2;
+}
+.nav-main{
+    height: inherit;
+    backdrop-filter: blur(30px);
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto !important;
+    position: relative; /* Set position to relative for absolute positioning of child */
+    overflow: hidden; /* Hide overflow to ensure nav-link-sub is contained */
+}
+
+.nav-link p {
+    margin: auto;
+    padding: 0.5rem 2rem;
+    z-index: 1; /* Ensure text is above the nav-link-sub */
+}
+
+.nav-active p {
+    padding: 0.5rem 2rem;
+    border-radius: 60px;
+    border: 1px solid;
+}
+
+.nav-link-sub {
+    position: absolute; /* Position it absolutely within the nav-link */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    width: 0; /* Start with width 0 */
+    text-shadow: 0px 0px .1rem black;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 60px;
+    background-color: white;
+    color: black;
+    transition: width .5s ease-in-out, padding .5s ease-in-out; /* Add padding transition */
+}
+
+.nav-link:hover .nav-link-sub {
+    width: inherit; /* Expand to full width on hover */
+    padding: 0.5rem 2rem;
+    border-radius: 60px;
+}
+.sub-main{
+    height: inherit !important;
+}
+.line{
+    height: 50px !important;
+    width: 1px;
+    border: none;
+    background-color: white;
+}
+.offcanvas{
+    backdrop-filter: blur(30px);
+    background-color:transparent;
+}

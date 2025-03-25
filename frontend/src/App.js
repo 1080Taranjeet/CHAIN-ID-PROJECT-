@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ThemeProvider } from './theme/ThemeContext';
+import Home from './components/Home/HOME';
+import NavBar from './components/NavBar/Navbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './styles.css';
+import Signup from './components/Signup/Signup';
+import FingerprintPage from './components/Signup/FingerprintPage';
+import FaceScanPage from './components/Signup/FaceScanPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/fingerprint" element={<FingerprintPage />} />
+          <Route path="/facescan" element={<FaceScanPage />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

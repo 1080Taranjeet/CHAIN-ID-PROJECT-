@@ -1,0 +1,51 @@
+* {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  transition-behavior: smooth !important;
+  transition: .3s !important;
+  transition-timing-function: ease !important;
+}
+
+.font {
+  text-align: justify;
+  text-spacing-trim: auto;
+  text-justify: inter-word;
+  font-size: 16px;
+  line-height: 1.6;
+  word-spacing: 0.1em;
+  /* Slightly increase spacing between words */
+  letter-spacing: 0.03em;
+  /* Slightly increase spacing between letters */
+  text-indent: 2em;
+  /* Indent the first line for visual clarity */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a subtle shadow */
+}
+
+#body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0% !important;
+}
+
+.video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  rotate: -180deg;
+  transform-origin: center;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  width: 100% !important;
+  height: 100vh !important;
+  z-index: -1;
+}
+
+.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh !important;
+  scroll-behavior: smooth;
+  scrollbar-width: 0px !important;
+}
