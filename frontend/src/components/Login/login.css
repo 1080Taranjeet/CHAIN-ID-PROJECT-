@@ -1,0 +1,226 @@
+/* Add to login.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-card-login {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px !important;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.auth-card-login:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.dark-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+  color: #fff !important;
+  border: 1px solid #333;
+}
+
+.light-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+  color: #333 !important;
+  border: 1px solid #e0e0e0;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.security-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.security-icon {
+  font-size: 2.2rem;
+  color: #1976d2;
+}
+
+.auth-title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #1976d2, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+.verify-button {
+  height: 56px;
+  border-radius: 12px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verify-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(25, 118, 210, 0.3);
+}
+
+.verified-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.method-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1976d2;
+  text-align: center;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.method-card {
+  padding: 20px;
+  border-radius: 15px !important;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(25, 118, 210, 0.1);
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.05), rgba(25, 118, 210, 0.01));
+}
+
+.method-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: rgba(25, 118, 210, 0.3);
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.08), rgba(25, 118, 210, 0.03));
+}
+
+.method-card.active {
+  border: 2px solid #1976d2;
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(25, 118, 210, 0.05));
+}
+
+.method-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(25, 118, 210, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.method-icon {
+  font-size: 1.8rem;
+  color: #1976d2;
+}
+
+.method-name {
+  font-weight: 600;
+  color: inherit;
+}
+
+.method-loading {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.otp-section {
+  background: rgba(25, 118, 210, 0.03);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.verify-otp-button {
+  height: 56px;
+  border-radius: 12px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+  width: 100%;
+}
+
+.verify-otp-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(25, 118, 210, 0.3);
+}
+
+.otp-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.timer {
+  color: #e91e63;
+  font-weight: 500;
+}
+
+.timer.active {
+  color: #4caf50;
+}
+
+.attempts {
+  color: #ff9800;
+  font-weight: 500;
+}
+
+.no-methods-message {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 12px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-link {
+  color: #1976d2 !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #0d47a1 !important;
+  transform: translateY(-2px);
+}

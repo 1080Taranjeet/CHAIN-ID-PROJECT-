@@ -49,3 +49,15 @@
   scroll-behavior: smooth;
   scrollbar-width: 0px !important;
 }
+
+/* Reset margins and padding only for face scan popup */
+.face-scan-container {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+/* Webcam container adjustments */
+.face-scan-container .webcam-container video {
+  transform: scaleX(-1); /* Mirror the video */
+}

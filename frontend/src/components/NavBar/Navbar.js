@@ -47,7 +47,7 @@ const Navbar = () => {
   }, [theme]);
 
   return (
-    <div className="" >
+    <div className="" style={{ display: ((url == "/facescan") || (url == "/fingerprint") ? "none" : "block") }} >
       <nav className="navbar fixed-top navbar-expand-lg d-xl-block d-none navbar-dark p-3 ">
         <div className="nav-main container-fluid d-flex align-items-center justify-content-between rounded"
           style={{
@@ -56,7 +56,7 @@ const Navbar = () => {
         >
           <div className="sub-main d-flex align-items-center col-4" >
             <div className="col-2  text-center" >
-              <img src={img} className="object-fit col-10 " />
+              <img src={img} alt='logo image' className="object-fit col-10 " />
             </div>
             <Link to={"/"} className="text-decoration-none main-heading h1"
               style={{
@@ -72,16 +72,16 @@ const Navbar = () => {
               <div className="nav-link-sub">Home</div>
             </Link>
             <Link to="/Contact"
-              className={url === "/Contact" ? "text-decoration-none nav-link nav-active" : "text-decoration-none nav-link"}
+              className={url === "/contact" ? "text-decoration-none nav-link nav-active" : "text-decoration-none nav-link"}
             >
               <p  >Contact us</p>
               <div className="nav-link-sub">Contact us</div>
             </Link>
-            <Link to="/Documentation"
-              className={url === "/Documentation" ? "text-decoration-none nav-link nav-active" : "text-decoration-none nav-link"}
+            <Link to="/about"
+              className={url === "/about" ? "text-decoration-none nav-link nav-active" : "text-decoration-none nav-link"}
             >
-              <p  >Documentation</p>
-              <div className="nav-link-sub">Documentation</div>
+              <p  >About</p>
+              <div className="nav-link-sub">About</div>
             </Link>
           </div>
           {
@@ -90,12 +90,12 @@ const Navbar = () => {
                 {/* <Link to="" className="text-decoration-none login-link" >SignIn</Link>
                               <div className="line mx-5"></div>
                               <Link to="" className="text-decoration-none login-link" >SignUp</Link> */}
-                <Link to={"/"} className="Home-button-main" >
+                <Link to={"/"} className="Home-button-main" style={{display: ((url === "/User" || url === "/facescan" || url === "/fingerprint") ? "none" : "block")}} >
                   <div className="Home-button-sub" >
                     <div></div>
                     <div></div>
                   </div>
-                  <button type="button" className="Home-button m-xl-2 m-1 px-xl-4 px-1" > <p className="mx-3 my-xl-2 my-1 " style={{ color: "greenyellow" }} >Hire Me</p> </button>
+                  <button type="button" className="Home-button m-xl-2 m-1 px-xl-4 px-1" > <p className="mx-3 my-xl-2 my-1 " style={{ color: "greenyellow" }} >Get started</p> </button>
                 </Link>
               </div>
             )
@@ -108,21 +108,27 @@ const Navbar = () => {
       <nav className="navbar fixed-top navbar-expand-lg d-xl-none d-block navbar-dark p-3 " >
         <div className="nav-main container-fluid d-flex align-items-center justify-content-between rounded">
           <div className="sub-main d-flex align-items-center col-md-4 col-7" >
-            <img src={img} className="object-fit col-md-2 col-4 " />
-            <Link to="" className="text-decoration-none main-heading h3" >TaranjeetDEV</Link>
+            <img src={img} alt='logo image' className="object-fit col-md-2 col-4 " />
+            <Link to="" className="text-decoration-none main-heading h3" >CHAINID</Link>
           </div>
-          <div className="col-md-1 col-sm-2 col-3 row px-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasRight" >
-            <div className="col-12 border border-white my-1" ></div>
-            <div className="col-12 border border-white my-1" ></div>
-            <div className="col-12 border border-white my-1" ></div>
+          <div className="col-md-1 col-sm-2 col-3 row px-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" >
+            <div className="col-12 border my-1" style={{
+              borderColor: theme.palette.border.main,
+            }} ></div>
+            <div className="col-12 border my-1" style={{
+              borderColor: theme.palette.border.main,
+            }} ></div>
+            <div className="col-12 border my-1" style={{
+              borderColor: theme.palette.border.main,
+            }}  ></div>
           </div>
         </div>
       </nav>
 
       <div className="offcanvas nav-main offcanvas-end" tabIndex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasRightLabel">
         <div className="offcanvas-header bg-dark " style={{ color: "orangered" }}>
-          <img src={img} className="object-fit col-md-2 col-2 " />
-          <Link id="offcanvasRightLabel" className="text-decoration-none main-heading h4" >TaranjeetDEV</Link>
+          <img src={img} alt="logo image" className="object-fit col-md-2 col-2 " />
+          <h5 id="offcanvasRightLabel" className="offcanvas-title">TaranjeetDEV</h5>
           <button type="button" className=" btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="row px-4 py-3 my-auto ">

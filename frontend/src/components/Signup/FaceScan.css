@@ -1,0 +1,33 @@
+.face-scan-container {
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Add a face frame overlay */
+.video-frame {
+    position: relative;
+}
+
+.video-frame::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 250px;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    pointer-events: none;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+    .video-frame::after {
+        width: 160px;
+        height: 200px;
+    }
+}

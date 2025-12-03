@@ -1,98 +1,147 @@
 /* src/components/Signup/Signup.css */
 .signup-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    background-color: #f0f2f5; /* Default light background color */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-  }
-  
-  .auth-card {
-    max-width: 600px; /* Increased width for better layout */
-    padding: 2rem; /* Increased padding for better spacing */
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Align items in a row */
-  }
-  
-  .form-section {
-    flex: 1; /* Take up available space */
-  }
-  
-  .info-section {
-    flex: 1; /* Take up available space */
-    padding-left: 1rem; /* Space between form and info section */
-    border-left: 1px solid #ddd; /* Divider line */
-  }
-  
-  .auth-title {
-    font-size: 2rem; /* Larger title font size */
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .signup-methods {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  /* Dark mode styles */
-  .dark .signup-container {
-    background-color: #121212; /* Dark background for the container */
-  }
-  
-  .dark .auth-card {
-    background-color: #343a40; /* Dark background for the card */
-    color: #ffffff; /* Light text */
-  }
-  
-  .light .auth-card {
-    background-color: #ffffff; /* Light background for the card */
-    color: #000000; /* Dark text */
-  }
-  
-  /* Button styles */
-  .btn-primary {
-    background-color: #1976d2; /* Primary button color */
-    border-color: #1976d2; /* Border color */
-  }
-  
-  .btn-primary:hover {
-    background-color: #155a8a; /* Darker shade on hover */
-    border-color: #155a8a; /* Darker border on hover */
-  }
-  
-  .btn-outline-primary {
-    color: #1976d2; /* Outline button text color */
-    border-color: #1976d2; /* Outline button border color */
-  }
-  
-  .btn-outline-primary:hover {
-    background-color: rgba(25, 118, 210, 0.1); /* Light background on hover */
-  }
-  
-  /* Toggle form link styles */
-  .toggle-form {
-    text-align: center; /* Center the toggle link */
-  }
-  
-  .toggle-form button {
-    color: #1976d2; /* Link color */
-    text-decoration: underline; /* Underline for emphasis */
-  }
-  
-  .toggle-form button:hover {
-    color: #155a8a; /* Darker color on hover */
-  }
-  
-  /* Info section styles */
-  .info-section h3 {
-    margin-bottom: 1rem; /* Space below the heading */
-  }
-  
-  .info-section p {
-    margin: 0.5rem 0; /* Space between paragraphs */
-    color: inherit; /* Inherit color from the theme */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s ease;
+  padding: 20px;
+}
+
+.auth-card {
+  max-width: 900px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  display: flex !important;
+  flex-direction: row !important;
+  overflow: hidden;
+}
+
+.form-section {
+  flex: 1 !important;
+  padding: 40px;
+}
+
+.info-section {
+  background-image: url("../../Images/signup\ backround.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* Ensure it covers the entire section */
+  flex: 1 !important;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Ensure full width */
+}
+
+.slick-slider {
+  width: 100%;
+  /* Make sure the slider takes full width */
+}
+
+.slick-slide div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* Ensures slide takes full width */
+}
+
+
+.auth-title {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.signup-methods {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+/* Dark mode styles */
+.dark .signup-container {
+  background-color: #121212;
+}
+
+.dark .auth-card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.light .auth-card {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #1565c0;
+  border-color: #1565c0;
+}
+
+.btn-primary:hover {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+}
+
+.btn-outline-primary {
+  color: #1565c0;
+  border-color: #1565c0;
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(21, 101, 192, 0.1);
+}
+
+/* Toggle form link styles */
+.toggle-form {
+  text-align: center;
+}
+
+.toggle-form button {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+.toggle-form button:hover {
+  color: #0d47a1;
+}
+
+/* Info section styles */
+.info-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.info-section p {
+  margin: 0.5rem 0;
+  color: inherit;
+  max-width: 80%;
+}
+
+.signup-methods .btn-outline-primary {
+  border: 2px solid #007bff !important;
+  color: #007bff !important;
+}
+
+.signup-methods .btn-outline-primary:hover {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+.signup-methods .btn-danger {
+  border: 2px solid #dc3545 !important;
+  color: #dc3545 !important;
+  background-color: transparent !important;
+}
+
+.signup-methods .btn-danger:hover {
+  background-color: #dc3545 !important;
+  color: white !important;
+}

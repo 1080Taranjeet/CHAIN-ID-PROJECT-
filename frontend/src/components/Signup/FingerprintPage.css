@@ -1,0 +1,27 @@
+.fingerprint-scan-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.scanned {
+  color: green;
+  /* Change color when scanned */
+  font-size: 48px;
+  /* Increase size of the fingerprint icon */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Original container styles preserved */
+.fingerprint-scan-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}

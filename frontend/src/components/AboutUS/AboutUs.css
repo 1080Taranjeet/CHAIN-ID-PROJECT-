@@ -1,0 +1,107 @@
+.about-us-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+  border-radius: 12px;
+  color: white;
+  margin-top: 2rem;
+}
+
+.section-card {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: none;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 10px;
+  height: 100%;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.step-number {
+  background: #3B82F6;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.security-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.security-feature {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.security-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.future-list {
+  padding-left: 1.5rem;
+}
+
+.future-list li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.future-list li::before {
+  content: "▹";
+  position: absolute;
+  left: -1.5rem;
+  color: #3B82F6;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .process-step {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
